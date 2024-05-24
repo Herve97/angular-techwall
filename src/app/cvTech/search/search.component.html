@@ -1,0 +1,8 @@
+<input type="text" #searchInput ngModel class="form-control" (keyup)="search(searchInput)">
+<ol>
+  <li *ngFor="let personne of searchResult" class="list-group-item" (click)="selectPersonne(personne)">
+    <img src="assets/images/{{personne.path|defaultImage}}" width="25px" height="25px" alt="{{personne.firstname}}" />
+    {{personne.firstname}} {{personne.name}}
+  </li>
+
+</ol>

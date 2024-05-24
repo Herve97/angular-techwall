@@ -1,0 +1,39 @@
+<h1>Modifier un Cv</h1>
+<form #formulaire="ngForm" *ngIf="personne">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" id="name" placeholder="Name" class="form-control" [(ngModel)]="personne.name" name="name" required>
+  </div>
+
+  <div class="form-group mt-3">
+    <label for="firstname">FirstName</label>
+    <input type="text" id="firstname" placeholder="FirstName" class="form-control" [(ngModel)]="personne.firstname"
+      name="firstname" required>
+  </div>
+
+  <div class="form-group mt-3">
+    <label for="age">Age</label>
+    <input type="number" min="0" max="170" id="age" placeholder="Age" class="form-control"
+      [(ngModel)]="personne.age" name="age" required>
+  </div>
+
+  <div class="form-group mt-3">
+    <label for="cin">Cin</label>
+    <input type="number" id="cin" placeholder="Cin" class="form-control" [(ngModel)]="personne.cin" name="cin" required>
+  </div>
+
+  <div class="form-group mt-3">
+    <label for="job">Job</label>
+    <input type="text" id="job" placeholder="Job" class="form-control" [(ngModel)]="personne.job" name="job" required>
+  </div>
+
+  <div class="form-group mt-3">
+    <label for="path">Path</label>
+    <input type="text" id="path" placeholder="Path" class="form-control" [(ngModel)]="personne.path" name="path">
+  </div>
+
+  <div class="form-group mt-3">
+    <button [disabled]="formulaire.invalid" class="btn btn-success" (click)="updateCv(formulaire)">Update</button>
+  </div>
+
+</form>

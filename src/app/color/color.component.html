@@ -1,0 +1,13 @@
+<app-fils (sendRequesttoData)="processRequest($event)" [filsProperty]="color"></app-fils>
+
+<div [style.backgroundColor]="color" class="mt-3">
+  Color
+</div>
+
+<!-- <input #InputColor (change)="changeColor(InputColor)" type="text" class="form-control col-4 mt-4"> -->
+<!-- Le [(ngModel)] nous permet de faire le two way binding-->
+<input type="text" [(ngModel)]="color" class="form-control" />
+
+Le contenu de la propriété color est {{ color }} <br>
+
+<a (click)="goToCV()" [ngStyle]="{color: color}"> Go to CV</a>

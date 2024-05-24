@@ -1,0 +1,9 @@
+<h1 class="mt-5">Les personne embauchées </h1>
+<div *ngIf="personnes">
+  <span *ngFor="let personne of personnes">
+
+    <img src="assets/images/{{personne.path|defaultImage}}" class="rounded-circle" width="150px" height="150px" alt="{{personne.firstname}}" />
+    {{personne.firstname}} {{personne.name}}
+
+  </span>
+</div>
